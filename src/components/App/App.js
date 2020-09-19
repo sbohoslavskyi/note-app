@@ -1,26 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import './App.css';
-import NoteList from '../NoteList';
+import Header from "../Header";
+import NoteList from "../NoteList";
 
 function App() {
     return (
         <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                    </ul>
-                </nav>
+            <Header />
+            <main>
                 <Switch>
-                    <Route exact path="/">
+                    <Route exact={true} path="/">
                         <NoteList />
                     </Route>
                 </Switch>
-            </div>
+            </main>
         </Router>
     );
 }
