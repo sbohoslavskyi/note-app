@@ -8,12 +8,17 @@ function App() {
     return (
         <Router>
             <Header />
-            <main>
-                <Switch>
-                    <Route exact={true} path="/">
-                        <NoteList />
-                    </Route>
-                </Switch>
+            <main className="hero">
+                <div className="hero-body">
+                    <div className="container">
+                        <Switch>
+                            <Route exact={true} path="/">
+                                <h1 className="title">Note App</h1>
+                                <NoteList />
+                            </Route>
+                        </Switch>
+                    </div>
+                </div>
             </main>
         </Router>
     );
